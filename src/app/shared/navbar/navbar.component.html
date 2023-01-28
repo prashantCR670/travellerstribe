@@ -1,0 +1,89 @@
+<nav
+  class="navbar navbar-expand-lg fixed-top navbar-transparent p-0"
+  color-on-scroll="500"
+>
+  <div class="container">
+    <div class="navbar-translate">
+      <a class="navbar-brand" href="#">
+        <img style="height: 60px" src="assets/img/logo.png" alt="" />
+      </a>
+      <button
+        class="navbar-toggler navbar-burger"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarToggler"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        (click)="sidebarToggle()"
+      >
+        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="!isDocumentation()">
+          <a
+            class="nav-link"
+            rel="tooltip"
+            title="Tours Details"
+            data-placement="bottom"
+            href="#/home"
+            target="_blank"
+          >
+            <p>Tours</p>
+            <!-- <i class="fa fa-twitter"></i>
+            <p class="d-lg-none">Tours</p> -->
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="!isDocumentation()">
+          <a
+            class="nav-link"
+            rel="tooltip"
+            title="Rental Details"
+            data-placement="bottom"
+            href="#/home"
+            target="_blank"
+            ><p>Rentals</p>
+            <!-- <i class="fa fa-facebook-square"></i> -->
+            <!-- <p class="d-lg-none">Rentals</p> -->
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="!isDocumentation()">
+          <a
+            class="nav-link"
+            rel="tooltip"
+            title="Contact Us For Help"
+            data-placement="bottom"
+            href="#/home"
+            target="_blank"
+          >
+            <p>Contact Us</p>
+            <!-- <i class="fa fa-instagram"></i> -->
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="!isHome()">
+          <a
+            [routerLink]="['/home']"
+            *ngIf="!isDocumentation()"
+            class="nav-link"
+            ><i class="nc-icon nc-layout-11"></i>Components</a
+          >
+          <a [routerLink]="['/home']" *ngIf="isDocumentation()" class="nav-link"
+            >Back to Kit</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="isDocumentation()">
+          <a
+            href="https://github.com/creativetimofficial/paper-kit-2-angular/issues?ref=pk2-free-local"
+            target="_blank"
+            class="nav-link"
+            >Have an issue</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
