@@ -1,2 +1,0 @@
-# travellerstribe
-Travelling Site 
